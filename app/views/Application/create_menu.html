@@ -9,13 +9,13 @@
 
 <body>
     <form action="@{Application.store_menu()}" name="makananku">
-        ID : <input type="text" name="makananku.id">
+        <input type="hidden" name="makananku.id">
         Nama Makanan : <input type="text" name="makananku.nama_makanan">
         Harga : <input type="text" name="makananku.harga">
         Pemilik :
-        <select name="makananku.makanan_jualan" id="">
+        <select name="makananku.makanan_jualan_id" id="">
             #{list items:daftar, as:'x'}
-            <option value="${x.id}">${x.id}</option>
+            <option value="${x.id}">${x.nama_pemilik}</option>
             #{/list}
         </select>
         <input type="submit" name="submit" id="" value="Simpan">

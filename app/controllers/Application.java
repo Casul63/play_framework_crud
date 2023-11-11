@@ -20,7 +20,8 @@ public class Application extends Controller {
     }
 
     public static void store_menu(Makanan makananku){
-        makananku.merge();
+        makananku = makananku.merge();
+        makananku.save();
         index();
     }
 
