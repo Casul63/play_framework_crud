@@ -11,6 +11,7 @@ import java.util.*;
 public class Makanan extends Model {
     public String nama_makanan;
     public int harga;
+    public String pemilik_makanan_to_string;
     @ManyToOne(targetEntity=PemilikMakanan.class)
     public PemilikMakanan pemilik_makanan;
 }

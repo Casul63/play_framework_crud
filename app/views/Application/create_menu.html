@@ -8,14 +8,14 @@
 </head>
 
 <body>
-    <form action="@{Application.store_menu()}" name="makananku">
-        <input type="hidden" name="makananku.id">
-        Nama Makanan : <input type="text" name="makananku.nama_makanan">
-        Harga : <input type="text" name="makananku.harga">
+    <form action="@{Application.store_menu()}" name="makanan">
+        <input type="hidden" name="makanan.id">
+        Nama Makanan : <input type="text" name="makanan.nama_makanan">
+        Harga : <input type="text" name="makanan.harga">
         Pemilik :
-        <select name="makananku.makanan_jualan_id" id="">
+        <select name="makanan.pemilik_makanan_to_string" id="">
             #{list items:daftar, as:'x'}
-            <option value="${x.id}">${x.nama_pemilik}</option>
+            <option value="${x.nama_pemilik}">${x.nama_pemilik}</option>
             #{/list}
         </select>
         <input type="submit" name="submit" id="" value="Simpan">

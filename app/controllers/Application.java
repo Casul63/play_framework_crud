@@ -19,9 +19,9 @@ public class Application extends Controller {
         render(daftar);
     }
 
-    public static void store_menu(Makanan makananku){
-        makananku = makananku.merge();
-        makananku.save();
+    public static void store_menu(Makanan makanan){
+        makanan = makanan.merge();
+        makanan.save();
         index();
     }
 
