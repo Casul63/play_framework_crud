@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Menu</title>
+    <style>
+        table {
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tambah Menu</h2>
+    <form action="@{Application.store_pemilik()}" name="pemilik">
+        <input type="hidden" name="pemilik.id" value="${pemilik_lama.id}">
+        <table>
+            <tr>
+                <td>Nama Pemilik</td>
+                <td>:</td>
+                <td><input type="text" name="pemilik.nama_pemilik" value="${pemilik_lama.nama_pemilik}"></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon</td>
+                <td>:</td>
+                <td><input type="text" name="pemilik.nomor_telepon" value="${pemilik_lama.nomor_telepon}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" name="submit" id="" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

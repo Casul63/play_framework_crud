@@ -19,25 +19,28 @@
 <body>
     <h2>Tambah Menu</h2>
     <form action="@{Application.store_menu()}" name="makanan">
-        <input type="hidden" name="makanan.id">
+        <input type="hidden" name="makanan.id" value="${makanan_lama.id}">
         <table>
             <tr>
                 <td>Nama Makanan</td>
                 <td>:</td>
-                <td><input type="text" name="makanan.nama_makanan"></td>
+                <td><input type="text" name="makanan.nama_makanan" value="${makanan_lama.nama_makanan}"></td>
             </tr>
             <tr>
                 <td>Harga</td>
                 <td>:</td>
-                <td><input type="text" name="makanan.harga"></td>
+                <td><input type="text" name="makanan.harga" value="${makanan_lama.harga}"></td>
             </tr>
             <tr>
                 <td>Pemilik</td>
                 <td>:</td>
                 <td>
                     <select name="makanan.pemilik_makanan_to_string" id="">
+
                         #{list items:daftar, as:'x'}
-                        <option value="${x.nama_pemilik}">${x.nama_pemilik}</option>
+                        <option value="${x.nama_pemilik}" ${x.nama_pemilik==makanan_lama.pemilik_makanan_to_string
+                            ? 'selected' : '' }>${x.nama_pemilik}
+                        </option>
                         #{/list}
                     </select>
                 </td>
